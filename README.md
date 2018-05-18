@@ -1,27 +1,20 @@
-[![Slack](https://firebasestorage.googleapis.com/v0/b/firestarter-96e46.appspot.com/o/assets%2Fslack-badge.svg?alt=media&token=3e68acef-3e00-4925-9710-e11cee5923e4)](https://join.slack.com/angularfirebase/shared_invite/MjA2NTgxMTI0MTk2LTE0OTg4NTQ4MDAtMjhhZDIzMjc0Mg)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-# FireStarter
+# Andre Henriques Resume
 
-FireStarter is an Angular PWA powered by Firebase. It can serve as a foundation to learn this stack and roll out more complex features.
-- [Live Demo](https://firestarter-96e46.firebaseapp.com/)
-- [Lessons and Screencasts](https://angularfirebase.com)
-- [Join the Slack Team](https://goo.gl/qF8Q5r)
+Andre Henriques' resume is an Angular 6 PWA powered by Firebase. It displays a profile about Andre, his experience and interests.
 
 ## Features
 
 - Angular 6.x
 - 100 PWA Lighthouse Score with NGSW
-- Firebase Auth, Storage, and Cloud Firestore Demos
+- Firebase Auth, Storage, and Cloud Firestore
 
 
 ## Usage
 
 1. Run
 
-- `git clone https://github.com/codediodeio/angular-firestarter.git firestarter`
-- `cd firestarter`
 - `npm install`
 
 2. Create a project at https://firebase.google.com/ and grab your web config:
@@ -45,6 +38,6 @@ export const environment = {
 };
 ```
 
-4. Open `src/app/app.module.ts` and replace the `firebasePlaceholderConfig` with your environment, i.e `environment.firebase`
+4. Develop with `ng serve`
 
-5. And finally `ng serve`
+5. When ready to host run `firebase deploy`
