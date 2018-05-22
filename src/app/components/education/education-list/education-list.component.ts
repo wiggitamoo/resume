@@ -9,12 +9,12 @@ import {Observable} from 'rxjs';
 })
 export class EducationListComponent implements OnInit {
 
-  education: Observable<any[]>;
+  educations: Observable<any[]>;
 
   constructor(private educationService: EducationService) { }
 
   ngOnInit() {
-    // this.education = this.educationService.getData();
+    this.educations = this.educationService.getData();
   }
 
 }

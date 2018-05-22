@@ -1,3 +1,7 @@
 <p>
   education-list works!
 </p>
+
+<div *ngFor="let education of educations | async">
+    <pre>{{education | json}}</pre>
+</div>

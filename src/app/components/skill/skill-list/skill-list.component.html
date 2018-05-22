@@ -1,3 +1,7 @@
 <p>
   skill-list works!
 </p>
+
+<div *ngFor="let skill of skills | async">
+    <pre>{{skill | json}}</pre>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {SkillService} from '../../skill/skill.service';
 
 @Component({
   selector: 'skill-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillListComponent implements OnInit {
 
-  constructor() { }
+    skills: Observable<any[]>;
 
-  ngOnInit() {
-  }
+    constructor(private skillService: SkillService) { }
+
+    ngOnInit() {
+        this.skills = this.skillService.getData();
+    }
 
 }
