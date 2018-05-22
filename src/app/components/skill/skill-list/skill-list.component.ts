@@ -10,6 +10,7 @@ import {SkillService} from '../../skill/skill.service';
 export class SkillListComponent implements OnInit {
 
     skills: Observable<any[]>;
+    skillsHidden: Boolean = true;
 
     constructor(private skillService: SkillService) { }
 

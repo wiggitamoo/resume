@@ -1,7 +1,56 @@
-<p>
-  experience-list works!
-</p>
+<section class="hero is-primary" (click)="experienceHidden = !experienceHidden">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-weight-bold">
+                Experience
+            </h1>
+            <h3 class="subtitle">
+                “Never regret. If it's good, it's wonderful. If it's bad, it's experience.”
 
-<div *ngFor="let experience of experiences | async">
-  <pre>{{experience | json}}</pre>
+                ― Victoria Holt
+            </h3>
+        </div>
+    </div>
+</section>
+
+<div *ngFor="let experience of experiences | async" [hidden]="experienceHidden">
+    <!--<pre>{{experience | json}}</pre>-->
+    <div class="box column">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-96x96">
+                    <img [src]="experience.logo" alt="logo">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{experience.title}}</strong> &nbsp;
+                        <small>{{experience.company}}</small>
+                        <br>
+                        <br>
+                        <span [innerHTML]="experience.description"></span>
+                    </p>
+                    <strong>
+                        <small>
+                            {{experience.city}}, {{experience.state}}
+                        </small>
+                    </strong>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item">
+                            {{experience.startDate.toDate() | amDateFormat:'MMM YYYY'}} &mdash;
+                            {{(experience.endDate?.toDate() | amDateFormat: 'MMM YYYY') || "Present"}}
+                        </a>
+                        <a class="level-item">
+                            <!--{{experience.endDate?.toDate() - experience.startDate.toDate() | amDuration: 'milliseconds'}}-->
+                            {{ experience.endDate?.toDate()| amDifference : experience.startDate.toDate() : 'years' :
+                            true | number : '.0-1'}} years
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
 </div>

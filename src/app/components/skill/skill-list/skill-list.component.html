@@ -1,7 +1,18 @@
-<p>
-  skill-list works!
-</p>
+<section class="hero is-danger" (click)="skillsHidden = !skillsHidden">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-weight-bold">
+                Skills
+            </h1>
+            <h3 class="subtitle">
+                "Any sufficiently advanced technology is indistinguishable from magic."
 
-<div *ngFor="let skill of skills | async">
+                ― Arthur C. Clarke
+            </h3>
+        </div>
+    </div>
+</section>
+
+<div *ngFor="let skill of skills | async" [hidden]="skillsHidden">
     <pre>{{skill | json}}</pre>
 </div>

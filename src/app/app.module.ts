@@ -17,6 +17,7 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireFunctionsModule} from 'angularfire2/functions';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import {MomentModule} from 'angular2-moment';
 
 // See README for Firebase setup instructions
 // 1. Delete Me!
@@ -25,24 +26,25 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule,
-    UiModule,
-    NotesModule,
-    UploadsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'andre-profile'),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    AngularFireFunctionsModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-  ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CoreModule,
+        UiModule,
+        NotesModule,
+        UploadsModule,
+        AngularFireModule.initializeApp(environment.firebase, 'andre-profile'),
+        AngularFirestoreModule,
+        AngularFireAuthModule,
+        AngularFireStorageModule,
+        AngularFireFunctionsModule,
+        ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+    ],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,7 +1,18 @@
-<p>
-  education-list works!
-</p>
+<section class="hero is-info" (click)="educationHidden = !educationHidden">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-weight-bold">
+                Education
+            </h1>
+            <h3 class="subtitle">
+                "An investment in knowledge pays the best interest."
 
-<div *ngFor="let education of educations | async">
+                ― Benjamin Franklin
+            </h3>
+        </div>
+    </div>
+</section>
+
+<div *ngFor="let education of educations | async" [hidden]="educationHidden">
     <pre>{{education | json}}</pre>
 </div>
