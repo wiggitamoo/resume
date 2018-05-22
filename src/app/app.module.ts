@@ -17,7 +17,6 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireFunctionsModule} from 'angularfire2/functions';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
-import {MomentModule} from 'angular2-moment';
 
 // See README for Firebase setup instructions
 // 1. Delete Me!

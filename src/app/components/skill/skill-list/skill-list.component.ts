@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
-import {SkillService} from '../../skill/skill.service';
+import {SkillService} from '../skill.service';
 
 @Component({
   selector: 'skill-list',
