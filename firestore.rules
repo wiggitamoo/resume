@@ -1,9 +1,21 @@
 service cloud.firestore {
     match /databases/{database}/documents {
+        match /users/{user} {
+            allow read, write: if request.auth.uid != null;
+        }
         match /notes/{note} {
             allow read, write: if request.auth.uid != null;
         }
+        match /photos/{photo} {
+          allow read, write: if request.auth.uid != null;
+        }
         match /experiences/{experience} {
+            allow read: if true;
+        }
+        match /educations/{education} {
+            allow read: if true;
+        }
+        match /skills/{skill} {
             allow read: if true;
         }
         match /{document=**} {

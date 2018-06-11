@@ -14,5 +14,47 @@
 </section>
 
 <div *ngFor="let education of educations | async" [hidden]="educationHidden">
-    <pre>{{education | json}}</pre>
+    <div class="box column">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-96x96">
+                    <img [src]="education.logo" alt="logo">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{education.school}}</strong> &nbsp;
+                        <small>{{education.company}}</small>
+                        <br><br>
+                        <span [innerHTML]="education.degree"></span>,
+                        <span [innerHTML]="education.field"></span>
+                        <span *ngIf="education.specialization">
+                            <br>
+                            <strong>Specialization:</strong> &nbsp;
+                            <span [innerHTML]="education.specialization"></span>
+                        </span>
+                        <span *ngIf="education.minor">
+                            <br>
+                            <strong>Minor:</strong> &nbsp;
+                            <span [innerHTML]="education.minor"></span>
+                        </span>
+                    </p>
+                    <strong>
+                        <small>
+                            {{education.gpa}} GPA, {{education.hours}} hours complete
+                        </small>
+                    </strong>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                        <a class="level-item">
+                            {{education.startDate.toDate() | amDateFormat:'YYYY'}} &mdash;
+                            {{(education.endDate?.toDate() | amDateFormat: 'YYYY') || "Present"}}
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
 </div>
