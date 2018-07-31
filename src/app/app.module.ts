@@ -17,11 +17,7 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireFunctionsModule} from 'angularfire2/functions';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
-
-// See README for Firebase setup instructions
-// 1. Delete Me!
-// 2. Add your project credentials to environments/environment.ts
-// 3. Then use it in the imports section below environment.firebase
+import {ChartsModule} from 'ng2-charts';
 
 
 @NgModule({
@@ -35,6 +31,7 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
         UiModule,
         NotesModule,
         UploadsModule,
+        ChartsModule,
         AngularFireModule.initializeApp(environment.firebase, 'andre-profile'),
         AngularFirestoreModule,
         AngularFireAuthModule,
