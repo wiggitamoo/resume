@@ -30,8 +30,6 @@
 
 
 <div *ngFor="let skill of skills | async" [hidden]="skillsHidden">
-    <pre>{{skill | json}}</pre>
-    <!--<chart [options]="chart.options"-->
-           <!--(load)="saveInstance($event.context, chart)">-->
-    <!--</chart>-->
+    <label style="text-align: center">{{skill.name}}</label>
+    <skill-chart [value]="skill.value" [title]="skill.name"></skill-chart>
 </div>

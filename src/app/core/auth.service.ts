@@ -11,6 +11,7 @@ import { NotifyService } from './notify.service';
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { auth } from 'firebase';
 
 interface User {
   uid: string;
@@ -29,7 +30,7 @@ export class AuthService {
     private router: Router,
     private notify: NotifyService
   ) {
-    this.user = this.afAuth.authState.pipe(
+      this.user = this.afAuth.authState.pipe(
       switchMap(user => {
         if (user) {
           return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
@@ -43,22 +44,22 @@ export class AuthService {
   ////// OAuth Methods /////
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new auth.GoogleAuthProvider();
     return this.oAuthLogin(provider);
   }
 
   githubLogin() {
-    const provider = new firebase.auth.GithubAuthProvider();
+    const provider = new auth.GithubAuthProvider();
     return this.oAuthLogin(provider);
   }
 
   facebookLogin() {
-    const provider = new firebase.auth.FacebookAuthProvider();
+    const provider = new auth.FacebookAuthProvider();
     return this.oAuthLogin(provider);
   }
 
   twitterLogin() {
-    const provider = new firebase.auth.TwitterAuthProvider();
+    const provider = new auth.TwitterAuthProvider();
     return this.oAuthLogin(provider);
   }
 
@@ -110,7 +111,7 @@ export class AuthService {
 
   // Sends email allowing user to reset password
   resetPassword(email: string) {
-    const fbAuth = firebase.auth();
+    const fbAuth = auth();
 
     return fbAuth
       .sendPasswordResetEmail(email)

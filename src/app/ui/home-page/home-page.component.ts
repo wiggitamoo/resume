@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import * as Highcharts from "highcharts";
 
 @Component({
-  selector: 'home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+    selector: "home-page",
+    templateUrl: "./home-page.component.html",
+    styleUrls: ["./home-page.component.scss"]
 })
 export class HomePageComponent implements OnInit {
+    constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+        // get data
+    }
 }

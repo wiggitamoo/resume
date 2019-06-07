@@ -1,33 +1,28 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {EducationListComponent} from './education/education-list/education-list.component';
-import {ExperienceListComponent} from './experience/experience-list/experience-list.component';
-import {SkillListComponent} from './skill/skill-list/skill-list.component';
-import {EducationService} from './education/education.service';
-import {ExperienceService} from './experience/experience.service';
-import {SkillService} from './skill/skill.service';
-import {MomentModule} from 'angular2-moment';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { EducationListComponent } from "./education/education-list/education-list.component";
+import { ExperienceListComponent } from "./experience/experience-list/experience-list.component";
+import { SkillListComponent } from "./skill/skill-list/skill-list.component";
+import { EducationService } from "./education/education.service";
+import { ExperienceService } from "./experience/experience.service";
+import { SkillService } from "./skill/skill.service";
+import { MomentModule } from "angular2-moment";
+import { HighchartsChartModule } from "highcharts-angular";
+import { SkillChartComponent } from "./skill/skill-chart/skill-chart.component";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        MomentModule
-    ],
+    imports: [CommonModule, MomentModule, HighchartsChartModule],
     declarations: [
         EducationListComponent,
         ExperienceListComponent,
-        SkillListComponent
+        SkillListComponent,
+        SkillChartComponent
     ],
-    providers: [
-        EducationService,
-        ExperienceService,
-        SkillService
-    ],
+    providers: [EducationService, ExperienceService, SkillService],
     exports: [
         EducationListComponent,
         ExperienceListComponent,
         SkillListComponent
     ]
 })
-export class ComponentsModule {
-}
+export class ComponentsModule {}
