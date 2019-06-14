@@ -4,22 +4,22 @@ import {
     ElementRef,
     OnInit,
     ViewChild
-} from "@angular/core";
-import { Observable } from "rxjs";
-import { SkillService } from "../skill.service";
+} from '@angular/core';
+import { Observable } from 'rxjs';
+import { SkillService } from '../skill.service';
 // import {chart, default as Highcharts} from 'highcharts';
 
 @Component({
-    selector: "skill-list",
-    templateUrl: "./skill-list.component.html",
-    styleUrls: ["./skill-list.component.scss"]
+    selector: 'skill-list',
+    templateUrl: './skill-list.component.html',
+    styleUrls: ['./skill-list.component.scss']
 })
 export class SkillListComponent implements OnInit {
     // @ViewChild('skillChart') skillChart: ElementRef;
     // chart: Highcharts.ChartObject;
 
     skills: Observable<any[]>;
-    skillsHidden: Boolean = false;
+    skillsHidden: Boolean = true;
 
     // chartOptions = {
     //     responsive: true
