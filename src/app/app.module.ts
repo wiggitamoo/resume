@@ -10,14 +10,14 @@ import {CoreModule} from './core/core.module';
 import {UploadsModule} from './uploads/uploads.module';
 import {UiModule} from './ui/ui.module';
 import {NotesModule} from './notes/notes.module';
-// AngularFire2 Modules
-import {AngularFireModule} from 'angularfire2';
-import {AngularFirestoreModule} from 'angularfire2/firestore';
-import {AngularFireStorageModule} from 'angularfire2/storage';
-import {AngularFireAuthModule} from 'angularfire2/auth';
-import {AngularFireFunctionsModule} from 'angularfire2/functions';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {ChartsModule} from 'ng2-charts';
+// AngularFire2 Modules
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 
 @NgModule({

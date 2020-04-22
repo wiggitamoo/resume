@@ -1,12 +1,7 @@
-import {
-    AfterViewInit,
-    Component,
-    ElementRef,
-    OnInit,
-    ViewChild
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SkillService } from '../skill.service';
+
 // import {chart, default as Highcharts} from 'highcharts';
 
 @Component({
