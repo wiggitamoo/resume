@@ -1,22 +1,26 @@
 <div id="wrapper">
-  <main-nav></main-nav>
-
-  <div class="content columns">
-    <aside class="column is-2 is-offset-1">
-      <user-profile></user-profile>
-    </aside>
-
-    <main class="column is-8">
-      <notification-message></notification-message>
-
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+    <div class="mat-app-background">
+        <main-nav></main-nav>
 
 
-  <footer class="footer">
-    Made with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by Andre Henriques<br>
-    Copyright © {{YEAR}} Andre Henriques. <br>
-    <br>Open Source | MIT License | Created by <a href="https://andrechenriques.com">Andre Henriques</a>
-  </footer>
+        <div class="content columns">
+            <aside class="column is-2 is-offset-1">
+                <user-profile></user-profile>
+            </aside>
+
+            <main class="column is-8">
+                <notification-message></notification-message>
+
+                <router-outlet></router-outlet>
+            </main>
+        </div>
+
+
+        <footer class="footer">
+            Made with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by Andre Henriques<br>
+            Copyright © {{YEAR}} Andre Henriques. <br>
+            <br>Open Source | MIT License | Created by <a href="https://andrechenriques.com">Andre Henriques</a>
+        </footer>
+
+    </div>
 </div>

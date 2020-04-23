@@ -1,12 +1,11 @@
-<h1>Please login using one of the methods below</h1>
-
-<p>
-  Or go back to my
-  <a href="/">home screen</a>.
-</p>
-<hr>
-
 <div *ngIf="!(auth.user | async); else alreadyLoggedIn">
+    <h1>Please login using one of the methods below</h1>
+
+    <p>
+        Or go back to my
+        <a href="/">home screen</a>.
+    </p>
+    <hr>
 
   <h3>Social Login</h3>
 

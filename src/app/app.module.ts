@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
         AngularFireAuthModule,
         AngularFireStorageModule,
         AngularFireFunctionsModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+        ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+        BrowserAnimationsModule
     ],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
