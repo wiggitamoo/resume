@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../../core/auth.service';
+import { SideNavService } from '../side-nav/side-nav.service';
 
 @Component({
-  selector: 'main-nav',
-  templateUrl: './main-nav.component.html',
-  styleUrls: ['./main-nav.component.scss']
+    selector: 'main-nav',
+    templateUrl: './main-nav.component.html',
+    styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent {
 
-  show = false;
+    constructor(public auth: AuthService, private sideNavService: SideNavService) {
+    }
 
-  constructor(public auth: AuthService) { }
-
-  toggleCollapse() {
-    this.show = !this.show;
-  }
-
+    clickMenu() {
+        this.sideNavService.toggle();
+    }
 }

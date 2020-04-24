@@ -14,6 +14,9 @@ import { ComponentsModule } from '../components/components.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
     imports: [
@@ -23,7 +26,9 @@ import { MatIconModule } from '@angular/material/icon';
         ComponentsModule,
         MatToolbarModule,
         MatButtonModule,
-        MatIconModule
+        MatIconModule,
+        MatSidenavModule,
+        MatListModule
     ],
     declarations: [
         UserLoginComponent,
@@ -31,6 +36,7 @@ import { MatIconModule } from '@angular/material/icon';
         MainNavComponent,
         LoadingSpinnerComponent,
         NotificationMessageComponent,
+        SideNavComponent,
         UserProfileComponent,
         UserFormComponent
     ],
@@ -38,6 +44,7 @@ import { MatIconModule } from '@angular/material/icon';
         MainNavComponent,
         LoadingSpinnerComponent,
         NotificationMessageComponent,
+        SideNavComponent,
         UserProfileComponent,
         UserFormComponent
     ]
