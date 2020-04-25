@@ -30,7 +30,7 @@ export class AuthGuard implements CanActivate {
       tap(loggedIn => {
         if (!loggedIn) {
           console.log('access denied');
-          this.notify.update('You must be logged in!', 'error');
+          this.notify.update('You must be logged in!', 'error', 7000);
           this.router.navigate(['/login']);
         }
       })

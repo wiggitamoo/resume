@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { SideNavService } from './side-nav.service';
 
@@ -7,14 +7,14 @@ import { SideNavService } from './side-nav.service';
     templateUrl: './side-nav.component.html',
     styleUrls: ['./side-nav.component.scss']
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent implements AfterViewInit {
     @ViewChild('sidenav') public sidenav: MatSidenav;
 
     constructor(private sideNavService: SideNavService) {
     }
 
-    ngOnInit(): void {
-        this.sideNavService.sideNavToggleSubject.subscribe(()=> {
+    ngAfterViewInit() {
+        this.sideNavService.sideNavToggleSubject.subscribe(() => {
             this.sidenav.toggle();
         });
     }

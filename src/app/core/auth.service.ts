@@ -64,7 +64,7 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
-        this.notify.update('You are logged in!!!', 'success');
+        this.notify.update('You are logged in!!!', 'success', 5000);
         return this.updateUserData(credential.user);
       })
       .catch(error => this.handleError(error));
@@ -76,7 +76,7 @@ export class AuthService {
     return this.afAuth.auth
       .signInAnonymously()
       .then(credential => {
-        this.notify.update('You are logged in!!!', 'success');
+        this.notify.update('You are logged in!!!', 'success', 5000);
         return this.updateUserData(credential.user); // if using firestore
       })
       .catch(error => {
@@ -90,7 +90,7 @@ export class AuthService {
     return this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(credential => {
-        this.notify.update('You are logged in!!!', 'success');
+        this.notify.update('You are logged in!!!', 'success', 5000);
         return this.updateUserData(credential.user); // if using firestore
       })
       .catch(error => this.handleError(error));
@@ -100,7 +100,7 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(credential => {
-        this.notify.update('You are logged in!!!', 'success');
+        this.notify.update('You are logged in!!!', 'success', 5000);
         return this.updateUserData(credential.user);
       })
       .catch(error => this.handleError(error));

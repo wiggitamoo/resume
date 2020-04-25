@@ -2,7 +2,8 @@
     <mat-toolbar-row>
 
         <button mat-icon-button>
-            <mat-icon  (click)="clickMenu()">menu</mat-icon>
+<!--            <mat-icon  (click)="clickMenu()">menu</mat-icon>-->
+            <mat-icon  (click)="sideNavService.toggle()">menu</mat-icon>
         </button>
 
         <a routerLink="/" class="navbar-image">

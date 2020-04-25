@@ -13,6 +13,6 @@ export class MainNavComponent {
     }
 
     clickMenu() {
-        this.sideNavService.toggle();
+        // this.sideNavService.toggle();
     }
 }

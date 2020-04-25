@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotifyService } from '../../core/notify.service';
+import { timeout } from 'rxjs/operators';
 
 @Component({
   selector: 'notification-message',
