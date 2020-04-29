@@ -9,10 +9,6 @@ import { SideNavService } from '../side-nav/side-nav.service';
 })
 export class MainNavComponent {
 
-    constructor(public auth: AuthService, private sideNavService: SideNavService) {
-    }
-
-    clickMenu() {
-        // this.sideNavService.toggle();
+    constructor(public auth: AuthService, public sideNavService: SideNavService) {
     }
 }

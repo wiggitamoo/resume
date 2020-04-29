@@ -8,7 +8,8 @@
 <ng-template #guest class="box">
   <h3>Howdy, GUEST</h3>
   <p class="card-text">Login to contact me...</p>
-  <button class="button" routerLink="/login">Login</button>
+    <button mat-raised-button color="primary" routerLink="/login">Login</button>
+<!--    <button class="button" routerLink="/login">Login</button>-->
 </ng-template>
 
 <!-- User logged in -->
@@ -17,7 +18,8 @@
     <h3>Howdy, {{ user.displayName }}</h3>
     <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'" width=50px>
     <p class="text-truncate">UID: {{ user.uid }}</p>
-    <button class="button" (click)="logout()">Logout</button>
+      <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+<!--      <button class="button" (click)="logout()">Logout</button>-->
   </div>
 </ng-template>
 

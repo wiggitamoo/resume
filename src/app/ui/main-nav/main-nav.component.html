@@ -3,7 +3,7 @@
 
         <button mat-icon-button>
 <!--            <mat-icon  (click)="clickMenu()">menu</mat-icon>-->
-            <mat-icon  (click)="sideNavService.toggle()">menu</mat-icon>
+            <mat-icon (click)="sideNavService.toggle()">menu</mat-icon>
         </button>
 
         <a routerLink="/" class="navbar-image">
@@ -12,13 +12,13 @@
 
         <h1 routerLink="/" class="image-text">Andre Henriques</h1>
 
-        <span class="menu-spacer"></span>
+<!--        <span class="menu-spacer"></span>-->
 
-        <div>
-            <a mat-button [routerLink]="'/login'" *ngIf="!(auth.user | async)"> Login </a>
-            <a mat-button [routerLink]="'/notes'"> Message Me </a>
-            <a mat-button [routerLink]="'/uploads'"> File Uploads </a>
-        </div>
+<!--        <div>-->
+<!--            <a mat-button [routerLink]="'/login'" *ngIf="!(auth.user | async)"> Login </a>-->
+<!--            <a mat-button [routerLink]="'/notes'"> Message Me </a>-->
+<!--            <a mat-button [routerLink]="'/uploads'"> File Uploads </a>-->
+<!--        </div>-->
     </mat-toolbar-row>
 </mat-toolbar>
 

@@ -1,9 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="side">
+    <mat-sidenav #sidenav mode="{{navMode}}" opened="true">
         <mat-nav-list>
 
-            <a mat-list-item [routerLink]="'/notes'"> Message Me </a>
-            <a mat-list-item [routerLink]="'/uploads'"> File Uploads </a>
+            <a mat-list-item [routerLink]="'/notes'" (click)="checkSideNav()"> Message Me </a>
+            <a mat-list-item [routerLink]="'/uploads'" (click)="checkSideNav()"> File Uploads </a>
 
             <a mat-list-item (click)="sidenav.close()">Close</a>
 

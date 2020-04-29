@@ -6,7 +6,7 @@ import { NotifyService } from './notify.service';
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { auth } from 'firebase';
+import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
